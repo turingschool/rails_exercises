@@ -8,4 +8,8 @@ Rails.application.routes.draw do
   get '/dogs/:id/edit', to: 'dogs#edit'
   patch '/dogs/:id', to: 'dogs#update'
   delete '/dogs/:id', to: 'dogs#destroy'
+
+  get '/dogs/:dog_id/tricks', to: 'tricks#index'
+  get '/dogs/:dog_id/tricks/new', to: 'tricks#new'
+  post '/dogs/:dog_id/tricks', to: 'tricks#create'
 end
