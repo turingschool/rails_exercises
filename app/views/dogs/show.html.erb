@@ -1,0 +1,4 @@
+<h1><%= @dog.name %></h1>
+<p>Breed: <%= @dog.breed %></p>
+<p>Age: <%= @dog.age %></p>
+<%= button_to "delete", "/dogs/#{@dog.id}", method: :delete %>
