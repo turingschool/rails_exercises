@@ -1,0 +1,11 @@
+<% @owners.each do |owner| %>
+  <section id="owner-<%= owner.id %>">
+    <h3><%= owner.name %></h3>
+    <p>Dogs:</p>
+    <ul>
+      <% owner.ownerships.each do |ownership| %>
+        <li><%= ownership.dog.name %>, owned for <%= ownership.length %> years </li>
+      <% end %>
+    </ul>
+  </section>
+<% end %>

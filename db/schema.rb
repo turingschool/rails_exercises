@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190827165239) do
+ActiveRecord::Schema.define(version: 20190827171459) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,11 +21,25 @@ ActiveRecord::Schema.define(version: 20190827165239) do
     t.integer "age"
   end
 
+  create_table "owners", force: :cascade do |t|
+    t.string "name"
+  end
+
+  create_table "ownerships", force: :cascade do |t|
+    t.bigint "owner_id"
+    t.bigint "dog_id"
+    t.integer "length"
+    t.index ["dog_id"], name: "index_ownerships_on_dog_id"
+    t.index ["owner_id"], name: "index_ownerships_on_owner_id"
+  end
+
   create_table "tricks", force: :cascade do |t|
     t.string "title"
     t.bigint "dog_id"
     t.index ["dog_id"], name: "index_tricks_on_dog_id"
   end
 
+  add_foreign_key "ownerships", "dogs"
+  add_foreign_key "ownerships", "owners"
   add_foreign_key "tricks", "dogs"
 end

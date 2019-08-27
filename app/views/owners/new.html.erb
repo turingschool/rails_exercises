@@ -1,0 +1,9 @@
+<%= form_tag "/dogs/#{@dog.id}/owners", method: :post do %>
+  <%= label_tag :name %>
+  <%= text_field_tag :name %>
+
+  <%= label_tag :length %>
+  <%= number_field_tag :length %>
+
+  <%= submit_tag "Create Owner" %>
+<% end %>

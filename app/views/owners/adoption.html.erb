@@ -1,0 +1,24 @@
+<h1>Adopt a dog for <%= @owner.name %></h1>
+
+<section class="dog_list">
+  <%= form_tag "/owners/#{@owner.id}/dogs", method: :post do %>
+    <%= label_tag :dogs %>
+    <%= text_field_tag :dogs %>
+
+    <%= submit_tag "Adopt" %>
+  <% end %>
+</section>
+
+<section class="dogs">
+  <ul>
+    <% @dogs.each do |dog| %>
+      <section id="dog-<%= dog.id %>">
+        <li>
+          <%= dog.name %>
+          <%= button_to "Adopt", "/owners/#{@owner.id}/dogs/#{dog.id}", method: :post %>
+        </li>
+      </section>
+    <% end %>
+  </ul>
+
+</section>

@@ -12,4 +12,11 @@ Rails.application.routes.draw do
   get '/dogs/:dog_id/tricks', to: 'tricks#index'
   get '/dogs/:dog_id/tricks/new', to: 'tricks#new'
   post '/dogs/:dog_id/tricks', to: 'tricks#create'
+
+  get '/owners', to: 'owners#index'
+  get '/dogs/:dog_id/owners/new', to: 'owners#new'
+  post '/dogs/:dog_id/owners', to: 'owners#create'
+  get '/owners/:owner_id/dogs/adopt', to: 'owners#adoption'
+  post '/owners/:owner_id/dogs/:dog_id', to: 'owners#adopt'
+  post '/owners/:owner_id/dogs', to: 'owners#adopt_from_list'
 end
