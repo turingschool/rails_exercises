@@ -1,6 +1,13 @@
 require 'rails_helper'
 
 RSpec.describe "ReSTful routing" do
+  # All the routes in these exercises follow ReSFul routing
+  # conventions, as well as the Rails convention for handling
+  # those routes. All routes should route to an action in the
+  # DogsController. You should 'handroll' all routes, meaning you
+  # should write the verb, path, controller, and action manually
+  # rather than using the `resources` syntax.
+
   it "can route to all the dogs" do
     visit "/dogs"
 

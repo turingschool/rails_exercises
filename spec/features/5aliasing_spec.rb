@@ -1,6 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe "Aliasing" do
+  # The following exercises will require you to add an
+  # alias to some of the routes you created in previous exercises.
+  
   it "can alias the index page" do
     visit dogs_path
 

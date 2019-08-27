@@ -1,6 +1,10 @@
 require 'rails_helper'
 
 RSpec.describe "Nonrestful routing" do
+  # All the routes in these exercises are nonrestful. There
+  # is no convention for creating/handling these routes. All these
+  # routes should route to an action in the NonrestfulController.
+  
   it "can route to the nonrestful controller's hello action" do
     visit '/hello'
 

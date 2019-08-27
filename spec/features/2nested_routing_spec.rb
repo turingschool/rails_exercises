@@ -1,6 +1,11 @@
 require 'rails_helper'
 
 RSpec.describe "Nested routing" do
+  # All the routes in these exercises follow ReSFul routing
+  # conventions for nested resources, as well as the Rails convention
+  # for handling those routes. All routes should route to an action
+  # in the TricksController. You should continue to "handroll" all routes.
+
   it "can route to all of a dog's tricks" do
     visit "/dogs/4/tricks"
 

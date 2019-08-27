@@ -1,6 +1,11 @@
 require 'rails_helper'
 
 RSpec.describe "Namespaced Routing" do
+  # The following routes will require you to make an admin namespace.
+  # Each one should route to an action in one of the controllers under
+  # `app/controllers/admin`. For this exercise and the following exercises,
+  # you should use the Rails Routing guide to help you: https://guides.rubyonrails.org/routing.html
+
   it "can route to an admin user show page" do
     visit '/admin/users/4'
 
