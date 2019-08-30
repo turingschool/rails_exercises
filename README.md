@@ -27,3 +27,5 @@ rails db:migrate
 ## Completing the Exercises
 
 Each group of exercises has tests under `spec/features` and/or `spec/models`. Each test file begins with a number (ex: `1dog_spec.rb`). This number indicates the order in which you should complete the tests.
+
+Run the tests individually with `rspec spec/models/1dog_spec.rb` for example. You can also skip tests by changing `it` blocks to `xit` which will be helpful for narrowing your focus.
