@@ -24,6 +24,8 @@ rails db:create
 rails db:migrate
 ```
 
+When switching between exercises, you may need to commit or stash your changes in order to checkout a new exercise branch. 
+
 ## Completing the Exercises
 
 Each group of exercises has tests under `spec/features` and/or `spec/models`. Each test file begins with a number (ex: `1dog_spec.rb`). This number indicates the order in which you should complete the tests.
