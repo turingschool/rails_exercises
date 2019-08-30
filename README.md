@@ -1,24 +1,29 @@
-# README
+# Rails Exercises
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This collection of exercises is for Turing students to practice Ruby on Rails concepts in isolation.
 
-Things you may want to cover:
+## Setup
 
-* Ruby version
+1. Clone this repository
+1. Run `bundle` from the command line
 
-* System dependencies
+### Exercises Setup
 
-* Configuration
+Currently, these exercises are included in this repo:
 
-* Database creation
+* controllers
+* models
+* routes
 
-* Database initialization
+Each group of exercises is located on a branch. In order to access these exercises, fetch the branch (`git fetch origin controllers`, for example) and checkout out the branch (`git checkout controllers`).
 
-* How to run the test suite
+Some exercises contain database migrations, so apply them with:
 
-* Services (job queues, cache servers, search engines, etc.)
+```
+rails db:create
+rails db:migrate
+```
 
-* Deployment instructions
+## Completing the Exercises
 
-* ...
+Each group of exercises has tests under `spec/features` and/or `spec/models`. Each test file begins with a number (ex: `1dog_spec.rb`). This number indicates the order in which you should complete the tests.
