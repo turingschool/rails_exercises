@@ -28,6 +28,13 @@ RSpec.describe "ReSTful routing" do
   end
 
   it "can route a form for a new dog" do
+    # You'll notice that this test passes without having to do anything!
+    # Sometimes, you don't need a controller to do anything and Rails
+    # will automatically load the view even if the controller action is
+    # undefined. However, it is best practice to add the empty action to
+    # explicitly communicate that the controller doesn't need to do anything.
+    # Add that empty action before moving on to the next exercise.
+
     visit '/dogs/new'
 
     expect(current_path).to eq('/dogs/new')
