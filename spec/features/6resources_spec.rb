@@ -131,12 +131,6 @@ RSpec.describe "Resources" do
     expect(page).to have_content("This page shows all the tricks for dog with id 2")
   end
 
-  it "can alias the nonrestful subtract path that takes multiple parameters" do
-    page.driver.submit :delete, subtract_path(4, 10), {}
-
-    expect(page).to have_content(6)
-  end
-
   it "can alias a namespaced route" do
     visit admin_user_path(2)
 
