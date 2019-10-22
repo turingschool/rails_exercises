@@ -32,4 +32,8 @@ If you get a message saying the database already exists when running `rails db:c
 
 Each group of exercises has tests under `spec/features` and/or `spec/models`. Each test file begins with a number (ex: `1dog_spec.rb`). This number indicates the order in which you should complete the tests.
 
-Run the tests individually with `rspec spec/models/1dog_spec.rb` for example. You can also skip tests by changing `it` blocks to `xit` which will be helpful for narrowing your focus. Additionally, you can run a specific test with `rspec spec/models/1dog_spec.rb:xyz` where `xyz` refers to line number in the test file where the `it` is located.
+Run the tests individually with `rspec spec/models/1dog_spec.rb` for example. You can also skip tests by changing `it` blocks to `xit` which will be helpful for narrowing your focus. Additionally, you can run a specific test with `rspec spec/models/1dog_spec.rb:xyz` where `xyz` refers to the line number in the test file where the `it` is located.
+
+## Contributing
+
+If you find any bugs or have suggestions, we'd love to hear them! You can email `brian@turing.io` or slack `@Brian Zanti` in the Turing Slack Workspace.
